@@ -239,7 +239,7 @@ planner process, using the checkout's resolved WSL path:
 ```bash
 export GIT_CONFIG_COUNT=2
 export GIT_CONFIG_KEY_0=safe.directory
-export WARPKEEP_LIVE_ROOT=/mnt/c/Users/developer/Documents/Codex/2026-09-07/wa/work/Warpkeep-live-pages
+: "${WARPKEEP_LIVE_ROOT:?Set WARPKEEP_LIVE_ROOT to the absolute WSL path of the Warpkeep-Live checkout}"
 export GIT_CONFIG_VALUE_0="$WARPKEEP_LIVE_ROOT"
 export GIT_CONFIG_KEY_1=core.autocrlf
 export GIT_CONFIG_VALUE_1=true
@@ -248,8 +248,7 @@ node scripts/verify-public-pages-mirror-plan.mjs \
   "$WARPKEEP_PUBLIC_SOURCE_COMMIT" "$WARPKEEP_LIVE_PARENT_COMMIT"
 ```
 
-Replace the example mount path only after resolving the actual public checkout;
-keep `safe.directory` exact and process-scoped. The planner is read-only unless
+Resolve the public checkout path before setting `WARPKEEP_LIVE_ROOT`. Keep `safe.directory` exact and process-scoped. The planner is read-only unless
 `--write-plan` is explicitly supplied. Check the public checkout identity and
 cleanliness again after planning.
 

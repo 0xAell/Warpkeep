@@ -15,7 +15,7 @@ attested compiler toolchain.
 From the repository root in PowerShell:
 
 ```powershell
-wsl -d Ubuntu-24.04 --exec docker build --pull=false --tag warpkeep-local-runner:2.337.0 --file /mnt/c/Users/heyas/Documents/Codex/2026-08-11/pl/Warpkeep-0.4.0-worktree/operations/local-runner/Dockerfile /mnt/c/Users/heyas/Documents/Codex/2026-08-11/pl/Warpkeep-0.4.0-worktree/operations/local-runner
+wsl -d Ubuntu-24.04 --exec docker build --pull=false --tag warpkeep-local-runner:2.337.0 --file operations/local-runner/Dockerfile operations/local-runner
 wsl -d Ubuntu-24.04 --exec docker image inspect warpkeep-local-runner:2.337.0 --format '{{.Id}} {{.Config.User}} {{.Os}}/{{.Architecture}}'
 ```
 

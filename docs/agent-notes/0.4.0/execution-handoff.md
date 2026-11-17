@@ -5313,9 +5313,7 @@ later synthetic v3 definition policy and does not prove production acceptance.
 ## Start from the actual checkout
 
 The development branch is `codex/prepared-keep-bindings-fix`, tracked by
-**`upstream/codex/prepared-keep-bindings-fix`** on GitHub. On the current Windows
-machine it is at
-`C:/Users/developer/Documents/Codex/2026-08-11/pl/Warpkeep-0.4.0-worktree`.
+**`upstream/codex/prepared-keep-bindings-fix`** on GitHub. Use `git worktree list` to find its local checkout.
 `origin` is a local baseline repository; equality with it does not prove GitHub sync.
 
 At `923e024`, the isolated dependency correction completed native preparation
